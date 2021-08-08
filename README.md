@@ -1,5 +1,11 @@
 # GeekSay
-A port of npm package [geeksay](https://github.com/swapagarwal/geeksay) to C#/.NET Standard.
+> geeks will ctrl+s the world
+
+A port of the npm package [geeksay](https://github.com/swapagarwal/geeksay) to C#/.NET Standard.
+
+## Installation
+
+It's available on NuGet as [GeekSay](https://www.nuget.org/packages/GeekSay).
 
 ## Usage
 
