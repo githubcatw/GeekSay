@@ -34,7 +34,7 @@ namespace GeekSay {
             if (int.TryParse(word, out wordNum)) {
                 return Convert.ToString(wordNum, 2);
             } else {
-                string lowerWord = numRE.Replace(word, "");
+                string lowerWord = numRE.Replace(word, "").ToLower();
                 if (GeekWords.conversions.ContainsKey(lowerWord)) {
                     word = word.Replace(word, GeekWords.conversions[lowerWord]);
                 }
