@@ -11,14 +11,16 @@ namespace GeekSay {
         /// Convert something from layman text to geek text.
         /// </summary>
         /// <param name="text">The text to convert.</param>
-        public static string Say(string text) => Say(text.Split(' '));
+        /// <param name="dos">Whether to enable extra Windows/DOS related translations.</param>
+        public static string Say(string text, bool dos = false) => Say(text.Split(' '), dos);
 
         /// <summary>
         /// Convert something from layman text to geek text.
         /// </summary>
         /// <param name="text">The text to convert.</param>
-        public static string Say(string[] text) {
-            var geekized = text.Select(e => SayWord(e)).ToArray();
+        /// <param name="dos">Whether to enable extra Windows/DOS related translations.</param>
+        public static string Say(string[] text, bool dos = false) {
+            var geekized = text.Select(e => SayWord(e, dos)).ToArray();
             return string.Join(" ",geekized);
         }
 
@@ -26,7 +28,8 @@ namespace GeekSay {
         /// Convert a word from layman text to geek text.
         /// </summary>
         /// <param name="word">The word to convert.</param>
-        public static string SayWord(string word) {
+        /// <param name="dos">Whether to enable extra Windows/DOS related translations.</param>
+        public static string SayWord(string word, bool dos = false) {
             int wordNum;
             if (int.TryParse(word, out wordNum)) {
                 return Convert.ToString(wordNum, 2);
@@ -34,6 +37,9 @@ namespace GeekSay {
                 string lowerWord = numRE.Replace(word, "");
                 if (GeekWords.conversions.ContainsKey(lowerWord)) {
                     word = word.Replace(word, GeekWords.conversions[lowerWord]);
+                }
+                else if (dos && GeekWords.winwords.ContainsKey(lowerWord)) {
+                    word = word.Replace(word, GeekWords.winwords[lowerWord]);
                 }
                 return word;
             }

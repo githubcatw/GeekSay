@@ -133,6 +133,15 @@ namespace GeekSay {
         };
 
         /// <summary>
+        /// Extra translations for Windows/DOS things.
+        /// </summary>
+        public static readonly Dictionary<string, string> winwords = new Dictionary<string, string>() {
+            {"prompt","$P$G"},
+            {"nowhere","NUL"},
+            {"library","dll"}
+        };
+
+        /// <summary>
         /// Geeky quotes in layman text.
         /// </summary>
         public static readonly string[] quotes = new string[] {
