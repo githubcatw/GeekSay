@@ -138,7 +138,8 @@ namespace GeekSay {
         public static readonly Dictionary<string, string> winwords = new Dictionary<string, string>() {
             {"prompt","$P$G"},
             {"nowhere","NUL"},
-            {"library","dll"}
+            {"library","dll"},
+            {"run","win+r"}
         };
 
         /// <summary>
