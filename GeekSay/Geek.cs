@@ -49,9 +49,12 @@ namespace GeekSay {
         /// Say a random word in layman and geek.
         /// </summary>
         /// <returns> A string in this format: <br/>Random translation: [layman word] -> [geek word]</returns>
-        public static string SaySomething() {
-            int index = new Random().Next(GeekWords.conversions.Keys.Count);
-            var rndWord = GeekWords.conversions.ElementAt(index);
+        /// <param name="dos">Whether to enable extra Windows/DOS related translations.</param>
+        public static string SaySomething(bool dos = false) {
+            var words = GeekWords.conversions;
+            if (dos) words = words.Concat(GeekWords.winwords).ToDictionary(k => k.Key, v => v.Value);
+            int index = new Random().Next(words.Keys.Count);
+            var rndWord = words.ElementAt(index);
             return $"Random translation: {rndWord.Key} -> {rndWord.Value}";
         }
     }
