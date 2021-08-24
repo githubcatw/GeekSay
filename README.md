@@ -1,4 +1,4 @@
-# GeekSay
+# GeekSay ![Nuget Downloads](https://img.shields.io/nuget/dt/GeekSay)
 > geeks will ctrl+s the world
 
 A port of the npm package [geeksay](https://github.com/swapagarwal/geeksay) to C#/.NET Standard.
