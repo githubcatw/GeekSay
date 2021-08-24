@@ -8,6 +8,10 @@
     <PackageProjectUrl>https://github.com/githubcatw/GeekSay</PackageProjectUrl>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/githubcatw/GeekSay</RepositoryUrl>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
+    <PackageReleaseNotes>- Added Windows/DOS translations. To enable them pass "true" as the second argument to Say/SayWord, or as the only argument in SaySomething.
+- The words are now case insensitive.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
