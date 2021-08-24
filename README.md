@@ -29,7 +29,7 @@ Random translation: send -> push
 
 ### Library
 
-The second argument for `Say()` and `SaySomething()` enable DOS/Windows related translations.
+The second argument for `Say()` and `SaySomething()` enables DOS/Windows related translations.
 
 ```c#
 Geek.Say("there is no place like home"); // there is no place like 127.0.0.1
